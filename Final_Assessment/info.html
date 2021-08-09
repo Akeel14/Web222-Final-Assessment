@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Akeel Lashley</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="info.css">
+    </head>
+    <body> 
+        
+        <div class="default-container">
+            <header>
+                <a href="honesty.html">
+                    <img src="logo.png" width="110px" height="auto" alt="logo">
+                    <span class="logo-name">Sign-Up Form</span>
+                </a>
+            </header>
+    
+            <div class="main-container">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="honesty.html">Welcome</a>
+                        </li>
+                        <li class="active">
+                            <a href="info.html">Information</a>
+                        </li>
+                        <li>
+                            <a href="reflection.html">Reflection</a>
+                        </li>
+                    </ul>
+                </nav>
+    
+                <main>
+                    <form id="signupForm" action="https://httpbin.org/post" method="POST">
+                        <h1 class="text-center">SIGN UP</h1>
+                        <hr>
+                        <div class="form-box">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" placeholder="Enter first name" name="firstName" id="firstName" pattern="^[A-Z][a-z ]*[a-z]$" required>   
+                            </div>
+                            <div class="form-group">
+                                <label for="lName">Last Name</label>
+                                <input type="text" placeholder="Enter last name" name="lName" id="lName" pattern="^[A-Z][a-z ]*[a-z]$" required>   
+                            </div>
+                            <div class="form-group">
+                                <label for="userName">User Name</label>
+                                <input type="text" placeholder="Enter user name" name="userName" id="userName" required> 
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" placeholder="Enter Email" name="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="age">Age</label>
+                                <input type="number" placeholder="Enter Age" name="age" id="age" min="18" max="60" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="educationlevel">Education Level</label>
+                                <select name="educationlevel" id="educationlevel" required>
+                                    <option value="" selected>- select -</option>
+                                    <option value="TechnicalDiploma">Technical Diploma</option>
+                                    <option value="CollegeDiploma">College Diploma</option>
+                                    <option value="BachelorDegree">Bachelor's Degree</option>
+                                    <option value="MasterDegree">Master's Degree</option>
+                                    <option value="others">Others</option>
+                                </select>
+                            </div>
+                            <div class="estatus-box">
+                                <label>Education Status</label>
+                                <div>
+                                    <div>
+                                        <input type="radio" name="estatus" id="graduated" required> Graduated
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="estatus" id="endrolled" required> Current enrolled
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="estatus" id="notgraduated" required> Did not graduate  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password</label>
+                                <input type="password" placeholder="Enter Password" name="pwd" id="pwd" required>   
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPwd">Confirm Password</label>
+                             <input type="password" placeholder="Repeat Password" name="confirmPwd" id="confirmPwd" required>
+                            </div>
+
+                            <input type="hidden" name="lastName" id="lastName" value="Your last name goes here" />
+                            <input type="hidden" name="studentId" id="studentId" value="Your student Id goes here" />
+
+                            <hr>
+                            <div class="form-group">
+                                <button type="reset" class="resetbtn">Reset</button>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="sunmitbtn">Submit</button>
+                            </div>
+                        </div>
+                    </form> 
+                </main>
+    
+                <aside>
+                    Side Panel
+                    <p id="errMsg"></p>
+                </aside>
+            </div>
+    
+            <footer>
+                <p>© 2021 WEB222 Final Assessment Summer</p>
+    
+                <a href="https://github.com/Akeel14/Web222-Final-Assessment" target="_blank">
+                    <img src="github.svg" width="20px" height="auto" alt="">
+                </a>
+            </footer>
+        </div>
+
+        <script src="info.js"></script>
+    </body>
+</html>
